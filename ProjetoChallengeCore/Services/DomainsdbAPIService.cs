@@ -28,7 +28,6 @@ namespace ProjetoChallengeCore.Services
 
             JArray domainJson = (JArray)JObject.Parse(response.Content.ReadAsStringAsync().Result)["domains"];
             var i = 0;
-
             foreach (var item in domainJson)
             {
                 domainList.Add(new Domain() { DomainName = domainJson[i]["domain"].ToString() });
